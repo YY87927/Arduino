@@ -16,8 +16,8 @@ void loop()
 { 
  //from bluetooth to Terminal. 
  if (MyBlue.available()) 
-   Serial.write(MyBlue.read()); 
+   Serial.println(MyBlue.read()); 
  //from termial to bluetooth 
  if (Serial.available()) 
-   MyBlue.write(Serial.read());
+   MyBlue.println(Serial.read());
 }
